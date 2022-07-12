@@ -13,15 +13,15 @@ import CoreData
 
 extension DetailViewController {
     
-   func setupLayout() {
-       self.view.backgroundColor = .white
-       navigationController?.navigationBar.prefersLargeTitles = false
-       self.navigationController?.isNavigationBarHidden = true
-       navigationController?.interactivePopGestureRecognizer?.delegate = self
-   }
+    func setupLayout() {
+        self.view.backgroundColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationController?.isNavigationBarHidden = true
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+    }
     
     func setupViews() {
-        let tapBackButton = UITapGestureRecognizer(target: self, action: #selector(self.cellTappedMethod(_:)))
+        let tapBackButton = UITapGestureRecognizer(target: self, action: #selector(self.backButtonTapped(_:)))
         
         let posterImageView: UIImageView = {
             let imageView = UIImageView(image: nil)
@@ -100,56 +100,44 @@ extension DetailViewController {
         self.view.addSubview(overviewLabel)
         
         NSLayoutConstraint.activate([
-        posterImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-        posterImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-        posterImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-        posterImageView.heightAnchor.constraint(equalToConstant: 350),
-        
-        backImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
-        backImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        backImageView.heightAnchor.constraint(equalToConstant: 30),
-        backImageView.widthAnchor.constraint(equalToConstant: 30),
-        
-        favoriteImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 48),
-        favoriteImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-        favoriteImageView.heightAnchor.constraint(equalToConstant: 30),
-        favoriteImageView.widthAnchor.constraint(equalToConstant: 30),
-        
-        titleLabel.bottomAnchor.constraint(equalTo: posterImageView.bottomAnchor, constant: -50),
-        titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-        
-        dateLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
-        dateLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 0),
-        
-        synopsisLabel.topAnchor.constraint(equalTo: posterImageView.bottomAnchor, constant: 20),
-        synopsisLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        
-        overviewLabel.topAnchor.constraint(equalTo: synopsisLabel.bottomAnchor, constant: 20),
-        overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-        
-        
+            posterImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            posterImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            posterImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            posterImageView.heightAnchor.constraint(equalToConstant: 350),
+            
+            backImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            backImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            backImageView.heightAnchor.constraint(equalToConstant: 30),
+            backImageView.widthAnchor.constraint(equalToConstant: 30),
+            
+            favoriteImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 48),
+            favoriteImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            favoriteImageView.heightAnchor.constraint(equalToConstant: 30),
+            favoriteImageView.widthAnchor.constraint(equalToConstant: 30),
+            
+            titleLabel.bottomAnchor.constraint(equalTo: posterImageView.bottomAnchor, constant: -50),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            dateLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+            dateLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 0),
+            
+            synopsisLabel.topAnchor.constraint(equalTo: posterImageView.bottomAnchor, constant: 20),
+            synopsisLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            
+            overviewLabel.topAnchor.constraint(equalTo: synopsisLabel.bottomAnchor, constant: 20),
+            overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            
         ])
     }
     
-    
-    
-    @objc func cellTappedMethod(_ sender:AnyObject){
+    @objc func backButtonTapped(_ sender:AnyObject){
         self.navigationController?.popViewController(animated: true)
     }
     
-    func favoritingMovie(){
-        database.create(self.viewModel.movieTitle, self.viewModel.overview, self.viewModel.posterURL, self.viewModel.releaseDate, completion: { response in
-            switch response {
-            case .failure(let err):
-                print(err)
-            case .success:
-                print("Success save data to database")
-            }
-        })
-        
-    }
+    
     
     func deleteMovie(){
         database.delete(self.viewModel.movieTitle, completion: { (response) in
@@ -162,32 +150,6 @@ extension DetailViewController {
             }
         })
     }
-    
-    @objc func searchFavoritesData() {
-           database.search(title: self.viewModel.movieTitle, completion: { (response) in
-               switch response {
-               case .failure(let err):
-                print(err)
-               case .success(let res):
-                if res == "Exist" {
-                    let favoritImage = UIImage(named: "iconGrayFavorite")?.withRenderingMode(.alwaysTemplate)
-                    self.favoriteImageView.setImage(favoritImage, for: .normal)
-                    self.favoriteImageView.tintColor = .orange
-                    
-                    let deleteButton = UITapGestureRecognizer(target: self, action: #selector(self.DeleteAlert))
-                    self.favoriteImageView.addGestureRecognizer(deleteButton)
-                } else {
-                    let favoritImage = UIImage(named: "iconGrayFavorite")?.withRenderingMode(.alwaysTemplate)
-                    self.favoriteImageView.setImage(favoritImage, for: .normal)
-                    self.favoriteImageView.tintColor = .white
-                    
-                    let favoriteButton = UITapGestureRecognizer(target: self, action: #selector(self.SaveAlert))
-                    self.favoriteImageView.addGestureRecognizer(favoriteButton)
-                }
-                   print(res)
-               }
-           })
-       }
     
     
     

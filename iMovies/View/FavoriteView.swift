@@ -12,7 +12,6 @@ import UIKit
 
 extension FavoriteViewController {
     
-    
     func setupViews() {
         self.navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true

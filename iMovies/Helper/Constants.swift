@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 class Constants {
     
     static let categories = ["Popular": "popular", "Now Playing": "now_playing", "Upcoming": "upcoming", "Top Rated": "top_rated"]
@@ -34,6 +32,8 @@ class Constants {
     static let USLanguage = "en-US"
     static let Page = "page"
     
-    
+    // CoreData
+    static let CoreDataEntityName = "MovieDatabase"
+    static let DataExist = "Exist"
     
 }

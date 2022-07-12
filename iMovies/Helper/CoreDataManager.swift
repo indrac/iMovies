@@ -20,7 +20,7 @@ class CoreDataManager {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let userEntity = NSEntityDescription.entity(forEntityName: "MovieDatabase", in: managedContext)
+        let userEntity = NSEntityDescription.entity(forEntityName: Constants.CoreDataEntityName, in: managedContext)
         
         let insert = NSManagedObject(entity: userEntity!, insertInto: managedContext)
         insert.setValue(title, forKey: "title")
@@ -35,14 +35,13 @@ class CoreDataManager {
             print (err)
             completion(.failure(err))
         }
-        
     }
     
     func retrieve() -> [Movies] {
         var movieList = [Movies]()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MovieDatabase")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataEntityName)
         
         do {
             let result = try managedContext.fetch(fetchRequest) as! [NSManagedObject]
@@ -54,7 +53,7 @@ class CoreDataManager {
                            poster_path: movie.value(forKey: "poster") as! String)
                 )
             }
-        }catch let err{
+        } catch let err{
             print(err)
         }
         return movieList
@@ -63,7 +62,7 @@ class CoreDataManager {
     func search(title: String, completion: @escaping (Result<String, Error>) -> ())  {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MovieDatabase")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataEntityName)
         
         fetchRequest.predicate = NSPredicate(format: "title == %@", title)
         
@@ -73,11 +72,8 @@ class CoreDataManager {
                 completion(.success("Not Exist"))
                 return
             }
-            completion(.success("Exist"))
-//            print("Found Title : \(objects[0].value(forKey: "title") ?? "")")
-//            print("Found Overview : \(objects[0].value(forKey: "overview") ?? "")")
-//            print("Found Poster : \(objects[0].value(forKey: "poster") ?? "")")
-        }catch let err{
+            completion(.success(Constants.DataExist))
+        } catch let err{
             completion(.failure(err))
         }
     }
@@ -85,10 +81,10 @@ class CoreDataManager {
     func delete(_ title:String, completion: @escaping (Result<String, Error>) -> ()){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "MovieDatabase")
+        let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: Constants.CoreDataEntityName)
         fetchRequest.predicate = NSPredicate(format: "title == %@", title)
         
-        do{
+        do {
             let dataToDelete = try managedContext.fetch(fetchRequest) as? [NSManagedObject]
             guard let objects = dataToDelete, objects.count > 0 else { return }
             for object in objects {
@@ -96,10 +92,9 @@ class CoreDataManager {
             }
             try managedContext.save()
             completion(.success("Deleted"))
-        }catch let err{
+        } catch let err{
             completion(.failure(err))
         }
-        
     }
     
 }

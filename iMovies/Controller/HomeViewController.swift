@@ -55,5 +55,18 @@ class HomeViewController: UITableViewController {
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
+    func callAPI() {
+        viewModel.fetchMovies(category: &category, completion: { (response) in
+            DispatchQueue.main.async {
+                switch response {
+                case .failure(let err):
+                    print(err)
+                case .success(let res):
+                    self.movies = res.results
+                    self.tableView.reloadData()
+                }
+            }
+        })
+    }
     
 }
