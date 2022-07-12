@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1240"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D9307900BF3460C19A34DE7F96B8DDF9"
-               BuildableName = "Pods_KitaMovies.framework"
-               BlueprintName = "Pods-KitaMovies"
+               BlueprintIdentifier = "EBAC370742FF3F5C29B24C2B8C48A644"
+               BuildableName = "Pods_iMovies.framework"
+               BlueprintName = "Pods-iMovies"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

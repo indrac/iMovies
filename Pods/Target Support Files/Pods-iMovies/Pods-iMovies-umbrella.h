@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_KitaMoviesVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_KitaMoviesVersionString[];
+FOUNDATION_EXPORT double Pods_iMoviesVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_iMoviesVersionString[];
 

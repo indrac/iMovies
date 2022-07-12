@@ -22,7 +22,6 @@
 		016969B624B74E01009F7188 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016969B524B74E01009F7188 /* FavoriteView.swift */; };
 		0181094E24AF5E78008109CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0181094D24AF5E78008109CC /* AppDelegate.swift */; };
 		0181095024AF5E78008109CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0181094F24AF5E78008109CC /* SceneDelegate.swift */; };
-		0181095224AF5E78008109CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0181095124AF5E78008109CC /* ViewController.swift */; };
 		0181095524AF5E78008109CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0181095324AF5E78008109CC /* Main.storyboard */; };
 		0181095824AF5E78008109CC /* KitaMovies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0181095624AF5E78008109CC /* KitaMovies.xcdatamodeld */; };
 		0181095A24AF5E7B008109CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0181095924AF5E7B008109CC /* Assets.xcassets */; };
@@ -31,7 +30,7 @@
 		0181096C24B0459E008109CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0181096B24B0459E008109CC /* HomeViewController.swift */; };
 		0181096E24B0713C008109CC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0181096D24B0713C008109CC /* Movie.swift */; };
 		0181097024B07732008109CC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0181096F24B07732008109CC /* HomeViewModel.swift */; };
-		B6958C88F89A53AA1D4FEF5F /* Pods_KitaMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B897BC5B5FD6F27AC8FB186 /* Pods_KitaMovies.framework */; };
+		4D19B8FC1F7121F382BE14A9 /* Pods_iMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 465689512E66DA35B82513E3 /* Pods_iMovies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,10 +47,9 @@
 		016969B124B74DE1009F7188 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		016969B324B74DEF009F7188 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		016969B524B74E01009F7188 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
-		0181094A24AF5E78008109CC /* KitaMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KitaMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0181094A24AF5E78008109CC /* iMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0181094D24AF5E78008109CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0181094F24AF5E78008109CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0181095124AF5E78008109CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0181095424AF5E78008109CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0181095724AF5E78008109CC /* KitaMovies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KitaMovies.xcdatamodel; sourceTree = "<group>"; };
 		0181095924AF5E7B008109CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,9 +59,9 @@
 		0181096B24B0459E008109CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0181096D24B0713C008109CC /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		0181096F24B07732008109CC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		70697963A3A99340804B04C4 /* Pods-KitaMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KitaMovies.debug.xcconfig"; path = "Target Support Files/Pods-KitaMovies/Pods-KitaMovies.debug.xcconfig"; sourceTree = "<group>"; };
-		8B897BC5B5FD6F27AC8FB186 /* Pods_KitaMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KitaMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9C1A1D385A04AF5C3898495 /* Pods-KitaMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KitaMovies.release.xcconfig"; path = "Target Support Files/Pods-KitaMovies/Pods-KitaMovies.release.xcconfig"; sourceTree = "<group>"; };
+		465689512E66DA35B82513E3 /* Pods_iMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50CA8FBAAF5E011347208B18 /* Pods-iMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovies.release.xcconfig"; path = "Target Support Files/Pods-iMovies/Pods-iMovies.release.xcconfig"; sourceTree = "<group>"; };
+		D038FACC788B20BF4BC3C346 /* Pods-iMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovies.debug.xcconfig"; path = "Target Support Files/Pods-iMovies/Pods-iMovies.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6958C88F89A53AA1D4FEF5F /* Pods_KitaMovies.framework in Frameworks */,
+				4D19B8FC1F7121F382BE14A9 /* Pods_iMovies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,22 +90,22 @@
 		0181094124AF5E78008109CC = {
 			isa = PBXGroup;
 			children = (
-				0181094C24AF5E78008109CC /* KitaMovies */,
+				0181094C24AF5E78008109CC /* iMovies */,
 				0181094B24AF5E78008109CC /* Products */,
 				74DDF98B9CE38B045CF2FDFE /* Pods */,
-				803C45BCF45D40406F2B6A0E /* Frameworks */,
+				46A6DA28D6C7E45890AF22FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		0181094B24AF5E78008109CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0181094A24AF5E78008109CC /* KitaMovies.app */,
+				0181094A24AF5E78008109CC /* iMovies.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0181094C24AF5E78008109CC /* KitaMovies */ = {
+		0181094C24AF5E78008109CC /* iMovies */ = {
 			isa = PBXGroup;
 			children = (
 				01688E7724B0F8D900451DD0 /* Helper */,
@@ -117,14 +115,13 @@
 				0181096424B043F4008109CC /* Model */,
 				0181094D24AF5E78008109CC /* AppDelegate.swift */,
 				0181094F24AF5E78008109CC /* SceneDelegate.swift */,
-				0181095124AF5E78008109CC /* ViewController.swift */,
 				0181095324AF5E78008109CC /* Main.storyboard */,
 				0181095924AF5E7B008109CC /* Assets.xcassets */,
 				0181095B24AF5E7B008109CC /* LaunchScreen.storyboard */,
 				0181095E24AF5E7B008109CC /* Info.plist */,
 				0181095624AF5E78008109CC /* KitaMovies.xcdatamodeld */,
 			);
-			path = KitaMovies;
+			path = iMovies;
 			sourceTree = "<group>";
 		};
 		0181096424B043F4008109CC /* Model */ = {
@@ -176,43 +173,43 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		46A6DA28D6C7E45890AF22FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				465689512E66DA35B82513E3 /* Pods_iMovies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		74DDF98B9CE38B045CF2FDFE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				70697963A3A99340804B04C4 /* Pods-KitaMovies.debug.xcconfig */,
-				E9C1A1D385A04AF5C3898495 /* Pods-KitaMovies.release.xcconfig */,
+				D038FACC788B20BF4BC3C346 /* Pods-iMovies.debug.xcconfig */,
+				50CA8FBAAF5E011347208B18 /* Pods-iMovies.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		803C45BCF45D40406F2B6A0E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8B897BC5B5FD6F27AC8FB186 /* Pods_KitaMovies.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0181094924AF5E78008109CC /* KitaMovies */ = {
+		0181094924AF5E78008109CC /* iMovies */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0181096124AF5E7B008109CC /* Build configuration list for PBXNativeTarget "KitaMovies" */;
+			buildConfigurationList = 0181096124AF5E7B008109CC /* Build configuration list for PBXNativeTarget "iMovies" */;
 			buildPhases = (
-				24D9B1A030B733B5886F6971 /* [CP] Check Pods Manifest.lock */,
+				D7B8FC594E0E1E884FDF44C5 /* [CP] Check Pods Manifest.lock */,
 				0181094624AF5E78008109CC /* Sources */,
 				0181094724AF5E78008109CC /* Frameworks */,
 				0181094824AF5E78008109CC /* Resources */,
-				065F14259B280F027180E052 /* [CP] Embed Pods Frameworks */,
+				392908E375B947532C49DCFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = KitaMovies;
+			name = iMovies;
 			productName = KitaMovies;
-			productReference = 0181094A24AF5E78008109CC /* KitaMovies.app */;
+			productReference = 0181094A24AF5E78008109CC /* iMovies.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -230,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0181094524AF5E78008109CC /* Build configuration list for PBXProject "KitaMovies" */;
+			buildConfigurationList = 0181094524AF5E78008109CC /* Build configuration list for PBXProject "iMovies" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -243,7 +240,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0181094924AF5E78008109CC /* KitaMovies */,
+				0181094924AF5E78008109CC /* iMovies */,
 			);
 		};
 /* End PBXProject section */
@@ -262,24 +259,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		065F14259B280F027180E052 /* [CP] Embed Pods Frameworks */ = {
+		392908E375B947532C49DCFF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KitaMovies/Pods-KitaMovies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-iMovies/Pods-iMovies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KitaMovies/Pods-KitaMovies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-iMovies/Pods-iMovies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KitaMovies/Pods-KitaMovies-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iMovies/Pods-iMovies-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		24D9B1A030B733B5886F6971 /* [CP] Check Pods Manifest.lock */ = {
+		D7B8FC594E0E1E884FDF44C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -294,7 +291,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KitaMovies-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-iMovies-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -316,7 +313,6 @@
 				01688E7D24B2336B00451DD0 /* DetailViewController.swift in Sources */,
 				016969B024B630D2009F7188 /* CoreDataManager.swift in Sources */,
 				01688E7924B0F8E600451DD0 /* UIView + Layout.swift in Sources */,
-				0181095224AF5E78008109CC /* ViewController.swift in Sources */,
 				0181096924B04454008109CC /* MoviesCell.swift in Sources */,
 				01688E7F24B233DE00451DD0 /* DetailView.swift in Sources */,
 				0181097024B07732008109CC /* HomeViewModel.swift in Sources */,
@@ -470,17 +466,17 @@
 		};
 		0181096224AF5E7B008109CC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70697963A3A99340804B04C4 /* Pods-KitaMovies.debug.xcconfig */;
+			baseConfigurationReference = D038FACC788B20BF4BC3C346 /* Pods-iMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2B47Y34R86;
-				INFOPLIST_FILE = KitaMovies/Info.plist;
+				INFOPLIST_FILE = iMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.indracahyadi.KitaMovies;
+				PRODUCT_BUNDLE_IDENTIFIER = com.indracahyadi.iMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -489,17 +485,17 @@
 		};
 		0181096324AF5E7B008109CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9C1A1D385A04AF5C3898495 /* Pods-KitaMovies.release.xcconfig */;
+			baseConfigurationReference = 50CA8FBAAF5E011347208B18 /* Pods-iMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2B47Y34R86;
-				INFOPLIST_FILE = KitaMovies/Info.plist;
+				INFOPLIST_FILE = iMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.indracahyadi.KitaMovies;
+				PRODUCT_BUNDLE_IDENTIFIER = com.indracahyadi.iMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -509,7 +505,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0181094524AF5E78008109CC /* Build configuration list for PBXProject "KitaMovies" */ = {
+		0181094524AF5E78008109CC /* Build configuration list for PBXProject "iMovies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0181095F24AF5E7B008109CC /* Debug */,
@@ -518,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0181096124AF5E7B008109CC /* Build configuration list for PBXNativeTarget "KitaMovies" */ = {
+		0181096124AF5E7B008109CC /* Build configuration list for PBXNativeTarget "iMovies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0181096224AF5E7B008109CC /* Debug */,

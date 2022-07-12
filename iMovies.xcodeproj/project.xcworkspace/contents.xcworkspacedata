@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:KitaMovies.xcodeproj">
+      location = "self:/Users/Administrator/SourceCode/Swift/iMovies/iMovies.xcodeproj">
    </FileRef>
 </Workspace>
